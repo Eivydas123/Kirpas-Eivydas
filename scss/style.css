@@ -1,0 +1,693 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper .register-circle {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper .register-circle::before {
+  content: "";
+  position: absolute;
+  width: 2000px;
+  height: 2000px;
+  top: 0%;
+  right: -52%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, #1e90ff), to(#0e60b3));
+  background: linear-gradient(to right, #1e90ff 70%, #0e60b3);
+  border-radius: 45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-animation: spin 45s linear infinite alternate;
+          animation: spin 45s linear infinite alternate;
+  z-index: -1;
+}
+
+.wrapper .body-image {
+  position: absolute;
+  top: 55%;
+  right: -20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  height: 500px;
+  opacity: 1;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+  -webkit-animation: register 6s 1s ease-in-out 1 forwards;
+          animation: register 6s 1s ease-in-out 1 forwards;
+}
+
+.wrapper .sign-in-content {
+  position: absolute;
+  top: 15%;
+  right: 21%;
+  color: white;
+  text-align: center;
+  -webkit-animation: text 4s ease-in-out forwards;
+          animation: text 4s ease-in-out forwards;
+}
+
+.wrapper .sign-in-content h1 {
+  line-height: 70px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.wrapper .sign-in-content p {
+  width: 350px;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+.wrapper .sign-in-content a {
+  padding: 8px 15px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 45px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  outline: 0;
+  cursor: pointer;
+  background: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper .sign-in-content a:hover {
+  background: #fff;
+  color: #333;
+}
+
+.wrapper .register-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 55%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .register-wrapper h1 {
+  text-align: center;
+  font-size: 4rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.wrapper .register-wrapper form {
+  position: relative;
+  padding: 20px 30px;
+  border-radius: 10px;
+  -webkit-animation: registerform 2s ease-in-out 1 forwards;
+          animation: registerform 2s ease-in-out 1 forwards;
+}
+
+.wrapper .register-wrapper form .button-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .register-wrapper form .button-select button {
+  padding: 6px 14px;
+  outline: 0;
+  border: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: #34495e;
+  color: #333;
+  cursor: pointer;
+}
+
+.wrapper .register-wrapper form .button-select button:nth-child(1) {
+  border-right: 1px solid grey;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: transparent;
+}
+
+.wrapper .register-wrapper form .button-select button:nth-child(2) {
+  background: transparent;
+  border-left: 1px solid grey;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.wrapper .register-wrapper form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px 0;
+  width: 400px;
+  position: relative;
+}
+
+.wrapper .register-wrapper form .form-group label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  left: 10px;
+}
+
+.wrapper .register-wrapper form .form-group img {
+  position: absolute;
+  width: 22px;
+  top: 54%;
+  left: 3%;
+  opacity: 0.5;
+}
+
+.wrapper .register-wrapper form .form-group input {
+  padding: 13px 35px;
+  border-radius: 55px;
+  padding-left: 43px;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background: rgba(128, 128, 128, 0.185);
+}
+
+.wrapper .register-wrapper form .regbutton {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: 0;
+  background: #1e90ff;
+  display: block;
+  color: #fff;
+  margin: 0 auto;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 55px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: 0;
+}
+
+.wrapper .register-wrapper form .regbutton:hover {
+  -webkit-animation: shadow 1.5s ease-in-out infinite alternate;
+          animation: shadow 1.5s ease-in-out infinite alternate;
+}
+
+.wrapper .register-wrapper form .sign-up {
+  text-align: center;
+  margin-top: 15px;
+  color: #999999;
+}
+
+.wrapper .register-wrapper form .sign-up a {
+  color: #428bca;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 1px;
+}
+
+.wrapper .register-wrapper form .sign-up a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #428bca;
+          text-decoration-color: #428bca;
+}
+
+.wrapper .register-wrapper form .p-or {
+  font-size: 1.1rem;
+  color: #999999;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.wrapper .register-wrapper form .icons {
+  margin: 0 auto;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.wrapper .register-wrapper form .icons .social-icon {
+  width: 46px;
+  height: 46px;
+  border: 1px solid #1e90ff;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.wrapper .register-wrapper form .icons .social-icon:hover {
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) rotate(500deg);
+            transform: translateY(-50%) rotate(500deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) rotate(500deg);
+            transform: translateY(-50%) rotate(500deg);
+  }
+}
+
+@-webkit-keyframes shadow {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0px 0px #1e8fff5e;
+            box-shadow: 0 0 0px 0px #1e8fff5e;
+  }
+  100% {
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
+    -webkit-box-shadow: 0 0 0px 6px #1e8fff5e;
+            box-shadow: 0 0 0px 6px #1e8fff5e;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0px 0px #1e8fff5e;
+            box-shadow: 0 0 0px 0px #1e8fff5e;
+  }
+  100% {
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
+    -webkit-box-shadow: 0 0 0px 6px #1e8fff5e;
+            box-shadow: 0 0 0px 6px #1e8fff5e;
+  }
+}
+
+@-webkit-keyframes laptop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-3%) translateY(-50%);
+            transform: translateX(-3%) translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%) translateY(-50%);
+            transform: translateX(0%) translateY(-50%);
+  }
+}
+
+@keyframes laptop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-3%) translateY(-50%);
+            transform: translateX(-3%) translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%) translateY(-50%);
+            transform: translateX(0%) translateY(-50%);
+  }
+}
+
+@-webkit-keyframes form {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes form {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes register {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(3%) translateY(-50%);
+            transform: translateX(3%) translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%) translateY(-50%);
+            transform: translateX(0%) translateY(-50%);
+  }
+}
+
+@keyframes register {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(3%) translateY(-50%);
+            transform: translateX(3%) translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%) translateY(-50%);
+            transform: translateX(0%) translateY(-50%);
+  }
+}
+
+@-webkit-keyframes registerform {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes registerform {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+.register-wrapper .circle {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-wrapper .circle::before {
+  content: "";
+  position: absolute;
+  width: 2000px;
+  height: 2000px;
+  top: 0%;
+  right: 48%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, #1e90ff), to(#0e60b3));
+  background: linear-gradient(to right, #1e90ff 70%, #0e60b3);
+  border-radius: 45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-animation: spin 45s linear infinite alternate;
+          animation: spin 45s linear infinite alternate;
+  z-index: -1;
+}
+
+.register-wrapper .body-img {
+  position: absolute;
+  top: 70%;
+  left: -25%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  height: 500px;
+  opacity: 1;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+  -webkit-animation: laptop 6s 1s ease-in-out 1 forwards;
+          animation: laptop 6s 1s ease-in-out 1 forwards;
+}
+
+.register-wrapper .sign-up-content {
+  position: absolute;
+  top: 15%;
+  left: 21%;
+  color: white;
+  text-align: center;
+  -webkit-animation: text 4s ease-in-out forwards;
+          animation: text 4s ease-in-out forwards;
+}
+
+.register-wrapper .sign-up-content h1 {
+  line-height: 70px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.register-wrapper .sign-up-content p {
+  width: 350px;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+.register-wrapper .sign-up-content a {
+  padding: 8px 15px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 45px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  outline: 0;
+  cursor: pointer;
+  background: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.register-wrapper .sign-up-content a:hover {
+  background: #fff;
+  color: #333;
+}
+
+.register-wrapper .login-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.register-wrapper .login-wrapper h1 {
+  text-align: center;
+  font-size: 4rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.register-wrapper .login-wrapper form {
+  position: relative;
+  padding: 20px 30px;
+  border-radius: 10px;
+  -webkit-animation: form 2s ease-in-out 1 forwards;
+          animation: form 2s ease-in-out 1 forwards;
+}
+
+.register-wrapper .login-wrapper form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 25px 0;
+  width: 400px;
+  position: relative;
+}
+
+.register-wrapper .login-wrapper form .form-group label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  left: 10px;
+}
+
+.register-wrapper .login-wrapper form .form-group img {
+  position: absolute;
+  width: 22px;
+  top: 54%;
+  left: 3%;
+  opacity: 0.5;
+}
+
+.register-wrapper .login-wrapper form .form-group input {
+  padding: 13px 35px;
+  border-radius: 55px;
+  padding-left: 43px;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background: rgba(128, 128, 128, 0.185);
+}
+
+.register-wrapper .login-wrapper form button {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: 0;
+  background: #1e90ff;
+  display: block;
+  color: #fff;
+  margin: 0 auto;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 55px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: 0;
+}
+
+.register-wrapper .login-wrapper form button:hover {
+  -webkit-animation: shadow 1.5s ease-in-out infinite alternate;
+          animation: shadow 1.5s ease-in-out infinite alternate;
+}
+
+.register-wrapper .login-wrapper form .sign-up {
+  text-align: center;
+  margin-top: 15px;
+  color: #999999;
+}
+
+.register-wrapper .login-wrapper form .sign-up a {
+  color: #428bca;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 1px;
+}
+
+.register-wrapper .login-wrapper form .sign-up a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #428bca;
+          text-decoration-color: #428bca;
+}
+
+.register-wrapper .login-wrapper form .p-or {
+  font-size: 1.1rem;
+  color: #999999;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.register-wrapper .login-wrapper form .icons {
+  margin: 0 auto;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.register-wrapper .login-wrapper form .icons .social-icon {
+  width: 46px;
+  height: 46px;
+  border: 1px solid #1e90ff;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.register-wrapper .login-wrapper form .icons .social-icon:hover {
+  background-color: #1e90ff;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

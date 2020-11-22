@@ -1,0 +1,224 @@
+body {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper {
+  .register-circle {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2000px;
+      height: 2000px;
+      top: 0%;
+      right: -52%;
+      background: linear-gradient(to right, #1e90ff 70%, #0e60b3);
+      border-radius: 45%;
+      transform: translateY(-50%);
+      animation: spin 45s linear infinite alternate;
+      z-index: -1;
+    }
+  }
+  .body-image {
+    position: absolute;
+    top: 55%;
+    right: -20%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 500px;
+    opacity: 1;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0;
+    animation: register 6s 1s ease-in-out 1 forwards;
+  }
+  .sign-in-content {
+    position: absolute;
+    top: 15%;
+    right: 21%;
+    color: white;
+    text-align: center;
+    animation: text 4s ease-in-out forwards;
+    h1 {
+      line-height: 70px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    p {
+      width: 350px;
+      line-height: 28px;
+      margin-bottom: 15px;
+    }
+    a {
+      padding: 8px 15px;
+      text-decoration: none;
+      border: 1px solid white;
+      border-radius: 45px;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #fff;
+      outline: 0;
+      cursor: pointer;
+      background: transparent;
+      transition: 0.5s;
+
+      &:hover {
+        background: #fff;
+        color: #333;
+      }
+    }
+  }
+  .register-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 55%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      color: #444;
+      margin-bottom: 10px;
+    }
+    form {
+      position: relative;
+      padding: 20px 30px;
+      border-radius: 10px;
+      animation: registerform 2s ease-in-out 1 forwards;
+      .button-select {
+        display: flex;
+        justify-content: center;
+
+        button {
+          padding: 6px 14px;
+          outline: 0;
+          border: 0;
+          font-size: 1.3rem;
+          font-weight: 600;
+          background: #34495e;
+          color: #333;
+          cursor: pointer;
+        }
+        button:nth-child(1) {
+          border-right: 1px solid grey;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          background: transparent;
+        }
+        button:nth-child(2) {
+          // background: #6000ea;
+          background: transparent;
+          border-left: 1px solid grey;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          // box-shadow: inset 0px 0px 2px black;
+        }
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        width: 400px;
+        position: relative;
+
+        label {
+          font-size: 1.2rem;
+          font-weight: 600;
+          position: relative;
+          left: 10px;
+        }
+        img {
+          position: absolute;
+          width: 22px;
+          top: 54%;
+          left: 3%;
+          opacity: 0.5;
+        }
+
+        input {
+          padding: 13px 35px;
+          border-radius: 55px;
+          padding-left: 43px;
+          border: none;
+          outline: none;
+          font-weight: 600;
+          font-size: 1.2rem;
+          background: rgba(128, 128, 128, 0.185);
+        }
+      }
+      .regbutton {
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        border: 0;
+        background: #1e90ff;
+        display: block;
+        color: #fff;
+        margin: 0 auto;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 55px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        outline: 0;
+
+        &:hover {
+          animation: shadow 1.5s ease-in-out infinite alternate;
+        }
+      }
+      .sign-up {
+        text-align: center;
+
+        margin-top: 15px;
+        color: #999999;
+        a {
+          color: #428bca;
+          text-decoration: none;
+          position: relative;
+          padding-bottom: 1px;
+          &:hover {
+            text-decoration: underline;
+            text-decoration-color: #428bca;
+          }
+        }
+      }
+      .p-or {
+        font-size: 1.1rem;
+        color: #999999;
+        text-align: center;
+        margin: 15px 0;
+      }
+      .icons {
+        margin: 0 auto;
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+
+        .social-icon {
+          width: 46px;
+          height: 46px;
+          border: 1px solid #1e90ff;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          text-decoration: none;
+          color: #333;
+          font-size: 1.1rem;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: #1e90ff;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
