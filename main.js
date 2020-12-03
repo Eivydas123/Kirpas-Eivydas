@@ -20,7 +20,6 @@ user.addEventListener("click", () => {
   passwordfield.style.marginTop = "0px";
 });
 teacher.addEventListener("click", () => {
-  // field.style.transitionDelay = "1s";
   passwordfield.style.transition = "1s 0s";
   teacher.style.background = "#6000ea";
   teacher.style.color = "white";
