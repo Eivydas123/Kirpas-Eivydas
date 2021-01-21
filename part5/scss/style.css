@@ -82,20 +82,4 @@ header .dropdown .dropdown-content a:last-child {
 header .dropdown .dropdown-content a:hover {
   background-color: #34495e;
 }
-
-.icons {
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-video {
-  outline: 0;
-}
-
-footer {
-  background: #353b48;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
 /*# sourceMappingURL=style.css.map */
